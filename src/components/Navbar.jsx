@@ -44,7 +44,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="search for products..."
-            className="px-8 py-1 w-96 rounded-full bg-gray-200"
+            className="px-10 py-1.5 w-96 rounded-full bg-gray-200"
           />
         </div>
         <div className="flex gap-8 ml-20 p-auto ">
