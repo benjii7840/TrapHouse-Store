@@ -36,7 +36,9 @@ const Navbar = () => {
         <ul className="flex  gap-3 ml-5 hover:cursor-pointer ">
           <li className="hover:text-orange-800">On Sale</li>
           <li className="hover:text-orange-800">New Arrivals</li>
-          <li className="hover:text-orange-800">Brands</li>
+          <Link to="/Brands" className="hover:text-orange-800">
+            Brands
+          </Link>
         </ul>
         <div className="relative ml-6">
           <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-600" />
