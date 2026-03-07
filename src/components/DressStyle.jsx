@@ -32,14 +32,13 @@ const DressStyle = () => {
     },
   ];
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-20 bg-gray-100">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-20 bg-gray-100 rounded-md">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <div className="bg-white rounded-3xl py-8 sm:py-12 mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center uppercase">
-            Browse by dress style
-          </h2>
-        </div>
+
+        <h2 className="text-xl pb-8 sm:text-4xl lg:text-5xl font-black text-center uppercase">
+          Browse by dress style
+        </h2>
 
         {/* Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">

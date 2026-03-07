@@ -1,5 +1,10 @@
 import React from "react";
-import { FaTwitter, FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
+import {
+  FaXTwitter,
+  FaFacebookF,
+  FaInstagram,
+  FaGithub,
+} from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
 
 const Footer = () => {
@@ -34,7 +39,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-3xl font-black mb-4">SHOP.CO</h3>
+            <h3 className="text-2xl font-black mb-4">TrapHouse.co</h3>
             <p className="text-gray-600 text-sm mb-6">
               We have clothes that suits your style and which you're proud to
               wear. From women to men.
@@ -46,7 +51,7 @@ const Footer = () => {
                 href="#"
                 className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
               >
-                <FaTwitter className="text-black" />
+                <FaXTwitter className="text-black" />
               </a>
               <a
                 href="#"
