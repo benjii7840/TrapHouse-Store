@@ -1,11 +1,14 @@
 // src/pages/ProductDetail.jsx
 import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck } from "react-icons/fa";
 import { MdChevronRight } from "react-icons/md";
+import { useCart } from "../Context/CartContext";
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const { addToCart } = useCart();
 
   // State
   const [selectedImage, setSelectedImage] = useState(0);
@@ -59,6 +62,26 @@ const ProductDetail = () => {
   const incrementQuantity = () => setQuantity((prev) => prev + 1);
   const decrementQuantity = () =>
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+
+  // Add to Cart Handler
+  const handleAddToCart = () => {
+    const productToAdd = {
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.images[0],
+    };
+
+    const selectedColorName = product.colors[selectedColor].name;
+
+    addToCart(productToAdd, selectedSize, selectedColorName, quantity);
+
+    // Show success feedback
+    alert(`Added ${quantity} item(s) to cart!`);
+
+    // Optional: Navigate to cart
+    // navigate("/cart");
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -218,7 +241,10 @@ const ProductDetail = () => {
               </div>
 
               {/* Add to Cart Button */}
-              <button className="flex-1 bg-black text-white font-semibold py-3 rounded-full hover:bg-gray-800 transition">
+              <button
+                onClick={handleAddToCart}
+                className="flex-1 bg-black text-white font-semibold py-3 rounded-full hover:bg-gray-800 transition"
+              >
                 Add to Cart
               </button>
             </div>
