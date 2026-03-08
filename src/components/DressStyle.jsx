@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DressStyle = () => {
   const styles = [
@@ -7,6 +8,7 @@ const DressStyle = () => {
       name: "Casual",
       image:
         "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600",
+      link: "/casual",
       span: "col-span-1",
     },
     {
@@ -14,6 +16,7 @@ const DressStyle = () => {
       name: "Formal",
       image:
         "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600",
+      link: "/formal",
       span: "col-span-1",
     },
     {
@@ -21,6 +24,7 @@ const DressStyle = () => {
       name: "Party",
       image:
         "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800",
+      link: "/party",
       span: "col-span-2",
     },
     {
@@ -28,14 +32,15 @@ const DressStyle = () => {
       name: "Gym",
       image:
         "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600",
+      link: "/gym",
       span: "col-span-1",
     },
   ];
+
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-20 bg-gray-100 rounded-md">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-
         <h2 className="text-xl pb-8 sm:text-4xl lg:text-5xl font-black text-center uppercase">
           Browse by dress style
         </h2>
@@ -43,7 +48,10 @@ const DressStyle = () => {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {/* Casual */}
-          <div className="sm:col-span-1 lg:col-span-1 bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative h-48 sm:h-64 lg:h-72 group cursor-pointer hover:shadow-xl transition-shadow">
+          <Link
+            to="/casual"
+            className="sm:col-span-1 lg:col-span-1 bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative h-48 sm:h-64 lg:h-72 group cursor-pointer hover:shadow-xl transition-shadow"
+          >
             <img
               src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600"
               alt="Casual"
@@ -54,10 +62,13 @@ const DressStyle = () => {
                 Casual
               </h3>
             </div>
-          </div>
+          </Link>
 
           {/* Formal */}
-          <div className="sm:col-span-1 lg:col-span-2 bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative h-48 sm:h-64 lg:h-72 group cursor-pointer hover:shadow-xl transition-shadow">
+          <Link
+            to="/formal"
+            className="sm:col-span-1 lg:col-span-2 bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative h-48 sm:h-64 lg:h-72 group cursor-pointer hover:shadow-xl transition-shadow"
+          >
             <img
               src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800"
               alt="Formal"
@@ -68,10 +79,13 @@ const DressStyle = () => {
                 Formal
               </h3>
             </div>
-          </div>
+          </Link>
 
           {/* Party */}
-          <div className="sm:col-span-1 lg:col-span-2 bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative h-48 sm:h-64 lg:h-72 group cursor-pointer hover:shadow-xl transition-shadow">
+          <Link
+            to="/party"
+            className="sm:col-span-1 lg:col-span-2 bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative h-48 sm:h-64 lg:h-72 group cursor-pointer hover:shadow-xl transition-shadow"
+          >
             <img
               src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800"
               alt="Party"
@@ -82,10 +96,13 @@ const DressStyle = () => {
                 Party
               </h3>
             </div>
-          </div>
+          </Link>
 
           {/* Gym */}
-          <div className="sm:col-span-1 lg:col-span-1 bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative h-48 sm:h-64 lg:h-72 group cursor-pointer hover:shadow-xl transition-shadow">
+          <Link
+            to="/gym"
+            className="sm:col-span-1 lg:col-span-1 bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative h-48 sm:h-64 lg:h-72 group cursor-pointer hover:shadow-xl transition-shadow"
+          >
             <img
               src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600"
               alt="Gym"
@@ -96,7 +113,7 @@ const DressStyle = () => {
                 Gym
               </h3>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
