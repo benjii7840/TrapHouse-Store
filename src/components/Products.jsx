@@ -1,5 +1,6 @@
 // src/components/Products.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import { products } from "../Data/productsData.js";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
@@ -39,7 +40,11 @@ const Products = () => {
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {products.map((product) => (
-            <div key={product.id} className="group cursor-pointer">
+            <Link
+              to={`/product/${product.id}`}
+              key={product.id}
+              className="group cursor-pointer"
+            >
               {/* Product Image */}
               <div className="bg-gray-100 rounded-2xl overflow-hidden mb-4 aspect-square">
                 <img
@@ -80,7 +85,7 @@ const Products = () => {
                   )}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
