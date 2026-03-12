@@ -91,9 +91,11 @@ const Products = () => {
 
         {/* View All Button */}
         <div className="text-center">
-          <button className="border-2 border-gray-200 px-12 py-3 rounded-full hover:bg-gray-100 transition font-semibold">
-            View All
-          </button>
+          <Link to="/Casual">
+            <button className="border-2 border-gray-200 px-12 py-3 rounded-full hover:bg-gray-100 transition font-semibold">
+              View All
+            </button>
+          </Link>
         </div>
       </div>
     </section>

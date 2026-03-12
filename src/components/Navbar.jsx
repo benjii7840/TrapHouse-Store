@@ -26,7 +26,7 @@ const Navbar = () => {
             {/* Dropdown Menu */}
             <ul className="absolute hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-40 top-full left-0 z-50">
               <li className="px-4 py-2 hover:bg-gray-100 transition">
-                <Link to="/men" className="block">
+                <Link to="/Casual" className="block">
                   Men
                 </Link>
               </li>

@@ -6,10 +6,17 @@ import {
   FaGithub,
 } from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
+import toast, { Toaster } from "react-hot-toast";
+
+const notify = () => {
+  toast.success("Successfully subscribed to the Brand Newsletter");
+};
 
 const Footer = () => {
   return (
     <footer className="bg-gray-100 pt-16 pb-8 px-4 sm:px-8 lg:px-20">
+      <Toaster position="top-center" />
+
       <div className="max-w-7xl mx-auto">
         {/* Newsletter Section */}
         <div className="bg-black rounded-3xl p-8 sm:p-12 mb-12 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -29,7 +36,10 @@ const Footer = () => {
             </div>
 
             {/* Subscribe Button */}
-            <button className="w-full bg-white text-black font-semibold py-3 rounded-full hover:bg-gray-100 transition">
+            <button
+              onClick={notify}
+              className="w-full bg-white text-black font-semibold py-3 rounded-full hover:bg-gray-100 transition hover:cursor-pointer"
+            >
               Subscribe to Newsletter
             </button>
           </div>
